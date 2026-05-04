@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, Outlet } from 'react-router-dom'
-
+//a ideia aqui é que somente tenha acesso ao porfile e config quem acessa Dashboard
 const Dashboard = () => {
   return (
     <div>
@@ -16,7 +16,7 @@ const Dashboard = () => {
         </ul>
       </nav>
       <div>
-        <Outlet />
+        <Outlet /> {/*Sinalizo a partir de onde as rotas filhas vão aparecer "/dashboard/profile" */}
       </div>
     </div>
   )

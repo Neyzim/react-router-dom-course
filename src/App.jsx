@@ -47,16 +47,21 @@ function App() {
       <h2>Itens</h2>
       <Link to={'/itens/1'} >Item 1</Link>
     </div>
-     <Routes >
-      <Route path="/" element={<Home />}/>
+
+
+     <Routes > {/*Todas as rotas precisam estar dentro do elemento Routes */}
+      <Route path="/" element={<Home />}/> 
       <Route path='/about' element={<About />} />
       <Route path='/contact' element={<Contact />} />
       <Route path='/login' element={<Login />} />
-       <Route path='/task/:taskId' element={<TaskDetails />}/>
+      {/*Rota dinâmica */}
+      <Route path='/task/:taskId' element={<TaskDetails />}/>
+      {/*Rotas aninhadas */}
       <Route path='/dashboard' element={<Dashboard />} >
         <Route path='profile' element={<Proflle />} />
         <Route path='config' element={<Configurations />} />
       </Route>
+      {/*rota 404 */}
       <Route path='*' element={<NotFound />} />
 
      

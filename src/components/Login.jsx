@@ -10,7 +10,7 @@ const Login = () => {
         event.preventDefault();
         console.log("O usuario foi logado");
 
-        navigate("/");
+        navigate("/"); // redireciona para uma rota após a execução da função
     }
   return (
     <div>
